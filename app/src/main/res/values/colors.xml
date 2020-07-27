@@ -8,5 +8,12 @@
     <color name="darkerNavy">#1B157F</color>
     <color name="white">#FFFFFF</color>
     <color name="darkgray">#444444</color>
+    <color name="primary">#5430A7</color>
+    <color name="primaryDark">#0CA0B3</color>
+    <color name="colorAccent">#B561EA</color>
+
+    <color name="startColor">#9baee0</color>
+    <color name="centerColor">#9480F4</color>
+    <color name="endColor">#B561EA</color>
 
 </resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/help_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/help"/>
+    <item
+        android:id="@+id/profile_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_outline_perm_identity_24"
+        android:title="@string/profile"/>
+    <item
+        android:id="@+id/result_menu"
+        android:enabled="true"
+        android:icon="@drawable/ic_outline_event_note_24"
+        android:title="@string/result"/>
+</menu>

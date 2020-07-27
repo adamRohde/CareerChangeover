@@ -3,12 +3,16 @@ package careerchangeover.com.valuesvisualizer;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.analytics.FirebaseAnalytics;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -36,10 +40,30 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         // Sets button on click listeners
-        findViewById(R.id.takeSelfSurveyButton).setOnClickListener(this);
-        findViewById(R.id.takeEmployerSurveyButton).setOnClickListener(this);
-        findViewById(R.id.viewResultsButton).setOnClickListener(this);
-        findViewById(R.id.crashButton).setOnClickListener(this);
+        findViewById(R.id.myValues).setOnClickListener(this);
+        findViewById(R.id.employerValues).setOnClickListener(this);
+
+        BottomNavigationView bottomNavigationMenu = findViewById(R.id.bottom_navigation);
+
+        bottomNavigationMenu.setOnNavigationItemSelectedListener(
+                new BottomNavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.help_menu:
+                                Intent openTutorial = new Intent(MainActivity.this,TutorialActivity.class);
+                                startActivity(openTutorial);
+                                break;
+                            case R.id.profile_menu:
+                                return true;
+                            case R.id.result_menu:
+                                Intent toResults = new Intent(MainActivity.this,ResultsActivity.class);
+                                startActivity(toResults);
+                                break;
+                        }
+                        return false;
+                    }
+                });
     }
 
     @Override
@@ -65,25 +89,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.takeSelfSurveyButton:
+            case R.id.myValues:
                 // Switches to personal survey page with extra
                 Intent toSelfEval = new Intent(MainActivity.this,SurveyActivity.class);
                 toSelfEval.putExtra("column_name", dbHandler.COLUMN_SELF_EVAL);
                 startActivity(toSelfEval);
                 break;
-            case R.id.takeEmployerSurveyButton:
+            case R.id.employerValues:
                 // Switches to employer survey page with extra
                 Intent toEmployerEval = new Intent(MainActivity.this,SurveyActivity.class);
                 toEmployerEval.putExtra("column_name", dbHandler.COLUMN_EMPLOYER_EVAL);
                 startActivity(toEmployerEval);
                 break;
-            case R.id.viewResultsButton:
-                // Switches to results page
-                Intent toResults = new Intent(MainActivity.this,ResultsActivity.class);
-                startActivity(toResults);
-                break;
-            case R.id.crashButton:
-                throw new RuntimeException("Test Crash"); // Force a crash
         }
     }
 }
