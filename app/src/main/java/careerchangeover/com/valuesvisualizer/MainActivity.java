@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         // Sets button on click listeners
-        findViewById(R.id.myValues).setOnClickListener(this);
-        findViewById(R.id.employerValues).setOnClickListener(this);
+//        findViewById(R.id.myValues).setOnClickListener(this);
+//        findViewById(R.id.employerValues).setOnClickListener(this);
 
         BottomNavigationView bottomNavigationMenu = findViewById(R.id.bottom_navigation);
 
@@ -51,8 +51,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.help_menu:
-                                Intent openTutorial = new Intent(MainActivity.this,TutorialActivity.class);
-                                startActivity(openTutorial);
+                                getSupportFragmentManager().beginTransaction().replace(R.id.main_menu_layout, new TutorialFragment()).commit();
+//                                Intent openTutorial = new Intent(MainActivity.this,TutorialActivity.class);
+//                                startActivity(openTutorial);
                                 break;
                             case R.id.profile_menu:
                                 return true;
@@ -64,6 +65,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         return false;
                     }
                 });
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_menu_layout, new HomeFragment()).commit();
     }
 
     @Override

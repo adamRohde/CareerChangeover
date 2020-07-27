@@ -4,73 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F9F8FE"
+    android:background="@color/main_background_color"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="66dp"
-        android:layout_height="71dp"
-        android:contentDescription="@string/splash_description"
-        app:layout_constraintBottom_toTopOf="@+id/text_view_id"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/icon" />
 
-    <TextView
-        android:id="@+id/text_view_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="88dp"
-        android:gravity="center_horizontal"
-        android:text="@string/logo"
-        android:textAlignment="center"
-        android:textColor="@color/primary"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/myValues"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:menu="@menu/bottom_navigation_menu"
+            tools:ignore="MissingConstraints"
+            app:itemIconTint="@color/white"
+            app:itemTextColor="@color/white" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_gradient"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_navigation_menu"
-        tools:ignore="MissingConstraints"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white" />
-
-    <Button
-        android:id="@+id/myValues"
-        android:layout_width="242.5dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="40dp"
-        android:text="@string/take_self_eval"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/primary"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/employerValues"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/employerValues"
-        android:layout_width="242.5dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="56dp"
-        android:text="@string/take_employer_eval"
-        android:textColor="@color/white"
-        app:backgroundTint="@color/primary"
-        app:cornerRadius="10dp"
+    <FrameLayout
+        android:id="@+id/main_menu_layout"
+        android:layout_width="409dp"
+        android:layout_height="673dp"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </FrameLayout>
 
+    <!--    New Code Start -->
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="66dp"-->
+<!--        android:layout_height="71dp"-->
+<!--        android:contentDescription="@string/splash_description"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/text_view_id"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="1.0"-->
+<!--        app:srcCompat="@drawable/icon" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/text_view_id"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="88dp"-->
+<!--        android:gravity="center_horizontal"-->
+<!--        android:text="@string/logo"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textColor="@color/primary"-->
+<!--        android:textSize="30sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/myValues"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottom_navigation"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@drawable/background_gradient"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:menu="@menu/bottom_navigation_menu"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        app:itemIconTint="@color/white"-->
+<!--        app:itemTextColor="@color/white" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/myValues"-->
+<!--        android:layout_width="242.5dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginBottom="40dp"-->
+<!--        android:text="@string/take_self_eval"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:backgroundTint="@color/primary"-->
+<!--        app:cornerRadius="10dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/employerValues"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/employerValues"-->
+<!--        android:layout_width="242.5dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginBottom="56dp"-->
+<!--        android:text="@string/take_employer_eval"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:backgroundTint="@color/primary"-->
+<!--        app:cornerRadius="10dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+<!--    New Code End -->
     <!--    <Button-->
     <!--        android:id="@+id/takeSelfSurveyButton"-->
     <!--        android:layout_width="match_parent"-->

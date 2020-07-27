@@ -11,6 +11,7 @@
     <color name="primary">#5430A7</color>
     <color name="primaryDark">#0CA0B3</color>
     <color name="colorAccent">#B561EA</color>
+    <color name="main_background_color">#F9F8FE</color>
 
     <color name="startColor">#9baee0</color>
     <color name="centerColor">#9480F4</color>
