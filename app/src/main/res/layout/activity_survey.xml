@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/turquoise"
+    android:background="@color/main_background_color"
     tools:context=".SurveyActivity">
 
     <TextView
         android:id="@+id/surveyStatementTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/survey_statement_top_margin"
-        android:layout_marginLeft="@dimen/survey_statement_horizontal_margin"
-        android:layout_marginRight="@dimen/survey_statement_horizontal_margin"
-        android:layout_marginBottom="@dimen/survey_statement_bottom_margin"
+        android:background="@drawable/survey_heading_background_gradient"
+        android:gravity="center"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
         android:text="survey statement"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
         android:textSize="@dimen/survey_statement_text_size"
         android:textStyle="bold"
-        android:textAllCaps="true"
-        android:textColor="@color/navy"/>
-
-    <ListView
-        android:id="@+id/surveyListView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/surveyStatementTextView"
-        android:scrollbarStyle="outsideOverlay"
-        android:fadeScrollbars="false"
-        android:paddingBottom="60dp"
-        android:background="@color/white"
-        android:clipToPadding="false" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/save_button_bottom_margin"
-        android:text="@string/save" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/primaryDark"
+        android:text="@string/save"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
-</RelativeLayout>
+    <ListView
+        android:id="@+id/surveyListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/saveButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/surveyStatementTextView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

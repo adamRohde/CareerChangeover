@@ -16,5 +16,6 @@
     <color name="startColor">#9baee0</color>
     <color name="centerColor">#9480F4</color>
     <color name="endColor">#B561EA</color>
+    <color name="disabled">#C8C8C8</color>
 
 </resources>

@@ -26,7 +26,7 @@
 
     survey page
     <string name="personal_survey_statement">As a guiding principle in my life, this value is... </string>
-    <string name="employer_survey_statement">As a business guiding principle for the company, this value is... </string>
+    <string name="employer_survey_statement">As a business guiding principle, this value is... </string>
     <string name="not_important">Not\nImportant</string>
     <string name="important">Important</string>
     <string name="very_important">Very\nImportant</string>
@@ -60,5 +60,12 @@
         <item>Power</item> <item>Social power, authority, wealth</item>
         <item>Security</item> <item>National security, family security, social order, cleanliness, reciprocation of favors</item>
     </string-array>
+
+
+    set reminder
+    <string name="save_result">You have to complete the survey to see results.</string>
+    <string name="set_reminder">Do you want to set up\n a reminder to complete it later?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
 </resources>

@@ -12,7 +12,7 @@
         android:layout_marginTop="@dimen/survey_vertical_margin"
         android:text="id"
         android:textSize="@dimen/survey_text_size"
-        android:textColor="@color/navy" />
+        android:textColor="@color/primary" />
 
     <TextView
         android:id="@+id/valueTextView"
@@ -25,7 +25,7 @@
         android:layout_marginEnd="@dimen/survey_horizontal_margin"
         android:text="value"
         android:textSize="@dimen/survey_text_size"
-        android:textColor="@color/navy" />
+        android:textColor="@color/primary" />
 
     <RadioGroup
         android:id="@+id/rankRadioGroup"
@@ -42,7 +42,8 @@
             android:layout_marginLeft="@dimen/radio_horizontal_margin"
             android:layout_marginRight="@dimen/radio_horizontal_margin"
             android:checked="false"
-            android:buttonTint="@color/navy"/>
+            android:buttonTint="@color/primary"
+            android:layout_weight="1" />
 
         <RadioButton
             android:id="@+id/radio1"
@@ -51,7 +52,8 @@
             android:layout_marginLeft="@dimen/radio_horizontal_margin"
             android:layout_marginRight="@dimen/radio_horizontal_margin"
             android:checked="false"
-            android:buttonTint="@color/navy"/>
+            android:buttonTint="@color/primary"
+            android:layout_weight="1"/>
 
         <RadioButton
             android:id="@+id/radio2"
@@ -60,7 +62,8 @@
             android:layout_marginLeft="@dimen/radio_horizontal_margin"
             android:layout_marginRight="@dimen/radio_horizontal_margin"
             android:checked="false"
-            android:buttonTint="@color/navy" />
+            android:buttonTint="@color/primary"
+            android:layout_weight="1"/>
 
         <RadioButton
             android:id="@+id/radio3"
@@ -69,7 +72,8 @@
             android:layout_marginLeft="@dimen/radio_horizontal_margin"
             android:layout_marginRight="@dimen/radio_horizontal_margin"
             android:checked="false"
-            android:buttonTint="@color/navy" />
+            android:buttonTint="@color/primary"
+            android:layout_weight="1"/>
 
         <RadioButton
             android:id="@+id/radio4"
@@ -78,7 +82,8 @@
             android:layout_marginLeft="@dimen/radio_horizontal_margin"
             android:layout_marginRight="@dimen/radio_horizontal_margin"
             android:checked="false"
-            android:buttonTint="@color/navy" />
+            android:buttonTint="@color/primary"
+            android:layout_weight="1"/>
 
         <RadioButton
             android:id="@+id/radio5"
@@ -87,7 +92,8 @@
             android:layout_marginLeft="@dimen/radio_horizontal_margin"
             android:layout_marginRight="@dimen/radio_horizontal_margin"
             android:checked="false"
-            android:buttonTint="@color/navy"/>
+            android:buttonTint="@color/primary"
+            android:layout_weight="1"/>
 
         <RadioButton
             android:id="@+id/radio6"
@@ -96,7 +102,8 @@
             android:layout_marginLeft="@dimen/radio_horizontal_margin"
             android:layout_marginRight="@dimen/radio_horizontal_margin"
             android:checked="false"
-            android:buttonTint="@color/navy" />
+            android:buttonTint="@color/primary"
+            android:layout_weight="1"/>
 
     </RadioGroup>
 
@@ -113,7 +120,7 @@
         android:text="@string/not_important"
         android:textSize="@dimen/imp_lbl_txt_size"
         android:textAlignment="center"
-        android:textColor="@color/navy" />
+        android:textColor="@color/primary" />
 
     <TextView
         android:id="@+id/important"
@@ -124,7 +131,7 @@
         android:layout_marginBottom="@dimen/imp_lbl_bottom_margin"
         android:text="@string/important"
         android:textSize="@dimen/imp_lbl_txt_size"
-        android:textColor="@color/navy" />
+        android:textColor="@color/primary" />
 
     <TextView
         android:id="@+id/veryImportant"
@@ -139,6 +146,6 @@
         android:text="@string/very_important"
         android:textSize="@dimen/imp_lbl_txt_size"
         android:textAlignment="center"
-        android:textColor="@color/navy" />
+        android:textColor="@color/primary" />
 
 </RelativeLayout>
